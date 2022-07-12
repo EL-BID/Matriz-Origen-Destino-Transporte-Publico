@@ -59,6 +59,32 @@ create table tarjetas as (
 			            UNBOUNDED FOLLOWING) as parada_hogar
 from viajes);
 
+create table tabla_sexo_tarjeta as
+with sexo_tarjetas as (
+	select distinct id_tarjeta,sexo 
+	from etapas
+	where sexo <> ''
+	)
+select *
+from sexo_tarjetas
+where id_tarjeta not in (
+	-- tarjetas con mas de un sexo
+	select id_tarjeta
+	from sexo_tarjetas
+	group by id_tarjeta
+	having count(*) > 1
+);
+
+alter table tarjetas
+add column sexo text;
+
+UPDATE tarjetas t
+SET sexo = st.sexo
+FROM tabla_sexo_tarjeta st
+WHERE t.id_tarjeta = st.id_tarjeta;
+
+drop table tabla_sexo_tarjeta; 
+
 alter table tarjetas
 add column viajes_con_etapas_incompletas bool;
 

@@ -511,9 +511,3 @@ CREATE INDEX etapas_ramal
 ON etapas(id_ramal);
 
 vacuum full etapas;
-
-select count(*) from etapas;
-
-select count(*) from etapas
-where tipo_trx_tren <> 'CHECK OUT'
-or tipo_trx_tren is null;

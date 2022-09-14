@@ -1,3 +1,6 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_Matriz-Origen-Destino-Transporte-Publico&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=EL-BID_Matriz-Origen-Destino-Transporte-Publico)
+![analytics image (flat)](https://raw.githubusercontent.com/vitr/google-analytics-beacon/master/static/badge-flat.gif)
+![analytics](https://www.google-analytics.com/collect?v=1&cid=555&t=pageview&ec=repo&ea=open&dp=/Matriz-Origen-Destino-Transporte-Publico/readme&dt=&tid=UA-4677001-16)
 # Matriz-Origen-Destino-Transporte-Publico
 
 En este repositorio se encuentran los resultados de la matriz OD en base a datos SUBE para la Región Metropolitana de Buenos Aires (RMBA) para un día miércoles de noviembre representativo del año 2019, como así también el dataset de transacciones SUBE y los procedimientos para obtenerla mediante scripts de PostgresSQL + PostGIS. 
